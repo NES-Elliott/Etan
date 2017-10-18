@@ -1,0 +1,24 @@
+{
+  "name": "etan-bot",
+  "version": "1.0.0",
+  "description": "Discord bot of many functions",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NES-Elliott/Etan-Bot.git"
+  },
+  "author": "Nate Spry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NES-Elliott/Etan-Bot/issues"
+  },
+  "homepage": "https://github.com/NES-Elliott/Etan-Bot#readme",
+  "dependencies": {
+    "discord.io": "^2.5.3",
+    "dotenv": "^4.0.0",
+    "request": "^2.83.0"
+  }
+}
