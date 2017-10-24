@@ -13,6 +13,11 @@ function giphySearch(queryGenre, queryTerm, chanID) {
 		giphyRequest(queryGenre, "angry", chanID);
 		break;
 
+		case "sad":
+		case "cry":
+		giphyRequest(queryGenre, "sad", chanID);
+		break;
+
 		case "any":
 		console.log("Feature is not yet implemented.");
 		console.log("Bot will message to the channel it was called in.");
@@ -37,7 +42,7 @@ function giphySearch(queryGenre, queryTerm, chanID) {
 
 function giphyRequest(queryGenre, queryTerm, chanID) { // TEST WHEN YOU HAVE INTERNET CONNECTION
 	giphy.random({
-		tag: queryGenre, queryTerm,
+		tag: `${queryGenre} ${queryTerm}`,
 		fmt: "json"
 	}).then(function(res, err) {
 		if (err) console.log(`ERROR: ${err}`);

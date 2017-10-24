@@ -19,27 +19,13 @@ bot.on("message", function(user, userID, channelID, message, event) {
 	commands.messageCommand(message, channelID, user, userID);
 });
 
-// bot.on('any', function(event) { // redo to use js instead of websockets
-// 	switch (event.t) {
-// 		// ADDED TO THE SERVER
-// 		case "GUILD_MEMBER_ADD":
-// 			bot.sendMessage({
-// 				to: "369307507983777794",
-// 				message: `<@!${event.d.user.id}> has joined the server! Welcome them!`
-// 			});
-// 			console.log(`${event.d.user.username} has joined the server`);
-// 		break;
-// 		// LEAVES THE SERVER
-// 		case "GUILD_MEMBER_REMOVE":
-// 			bot.sendMessage({
-// 				to: "369307507983777794",
-// 				message: `<@!${event.d.user.id}> has left the server. RIP`
-// 			});
-// 			console.log(`${event.d.user.username} has left the server`);
-// 		break;
-// 		// BANNED FROM SERVER
-// 	}
-// });
+bot.on("guildMemberAdd", function(member) {
+	console.log(member);
+});
+
+bot.on("guildMemberRemove", function(member) {
+	console.log(member);
+});
 
 module.exports = {
 	bot

@@ -15,6 +15,14 @@ function messageCommand(messCmd, chanID, user, userID) {
 		var searchArray = messCmd.split(" ").slice(1);
 
 		switch (cmd) {
+			case "help":
+			var disBot = require("./bot.js");
+			disBot.bot.sendMessage({
+				to: chanID,
+				message: `Hello <@!${userID}>, the current commands are:\n ~ani {happy, sad, mad}`
+			});
+			break;
+
 			case "ani":
 			gif.giphySearch("anime", searchArray, chanID);
 			break;
