@@ -6,6 +6,7 @@ var bot = new Discord.Client({
 	token: process.env.DISCORD_BOT_TOKEN,
 	autorun: true
 });
+
 // ON CONNECT - Bot is ready for commands
 bot.on("ready", function(event) {
 	console.log("Connected.")
@@ -13,6 +14,7 @@ bot.on("ready", function(event) {
 	console.log(`${bot.username}#${bot.discriminator}`);
 	console.log(`ID: ${bot.id}`)
 });
+
 // ON MESSAGE - Listens for messages sent in the guild
 bot.on("message", function(user, userID, channelID, message, event) {
 	var commands = require("./commands.js");
